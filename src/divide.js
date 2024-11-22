@@ -1,5 +1,8 @@
 function divide(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number' || a === undefined || b === undefined) {
+    if (a === undefined || b === undefined) {
+      return undefined;
+    }
+    if (typeof a !== 'number' || typeof b !== 'number') {
       return undefined;
     }
     return a / b;

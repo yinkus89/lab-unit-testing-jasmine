@@ -18,11 +18,12 @@ describe('calculateArea', function() {
     });
   
     it('should take two numbers as arguments', function() {
-      expect(calculateArea(5, 3)).not.toBeUndefined();
+      expect(calculateArea.length).toBe(2);
     });
   
     it('should return the product of the two numbers (area)', function() {
       expect(calculateArea(5, 3)).toBe(15);
+      expect(calculateArea(-5, 3)).toBe(-15);
     });
   
     it('should return undefined if an argument is missing', function() {
@@ -31,8 +32,9 @@ describe('calculateArea', function() {
     });
   
     it('should return undefined if any argument is not a number', function() {
-      expect(calculateArea(5, 'b')).toBeUndefined();
-      expect(calculateArea('a', 3)).toBeUndefined();
+      expect(calculateArea(5, '3')).toBeUndefined();
+      expect(calculateArea('5', 3)).toBeUndefined();
     });
   });
+  
   
